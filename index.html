@@ -3,42 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kapoorsaumitra</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Saumitra Kapoor</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'JetBrains Mono', monospace;
+            background-color: #282828;
+            color: #ebdbb2;
+            height: 100%;
+        }
+        .editor {
+            display: flex;
+            height: 100%;
+        }
+        .sidebar {
+            width: 50px;
+            background-color: #1d2021;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+        }
+        .sidebar-icon {
+            width: 24px;
+            height: 24px;
+            margin-bottom: 20px;
+            background-color: #928374;
+            border-radius: 4px;
+        }
+        .main-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .tab-bar {
+            background-color: #1d2021;
+            padding: 10px;
+            display: flex;
+        }
+        .tab {
+            padding: 5px 10px;
+            margin-right: 5px;
+            background-color: #3c3836;
+            border-radius: 4px 4px 0 0;
+        }
+        .active-tab {
+            background-color: #282828;
+        }
+        .content {
+            padding: 20px;
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+        .line-numbers {
+            color: #928374;
+            float: left;
+            text-align: right;
+            padding-right: 10px;
+            width: 30px;
+        }
+        h1, h2 {
+            color: #b8bb26;
+        }
+        .comment {
+            color: #928374;
+        }
+        .string {
+            color: #b8bb26;
+        }
+        .function {
+            color: #8ec07c;
+        }
+        .keyword {
+            color: #fb4934;
+        }
+        a {
+            color: #83a598;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <div>
-        <h1>welcome to my digital space on the internet</h1>
-    </div>
+    <div class="editor">
+        <div class="sidebar">
+            <div class="sidebar-icon"></div>
+            <div class="sidebar-icon"></div>
+            <div class="sidebar-icon"></div>
+        </div>
+        <div class="main-content">
+            <div class="tab-bar">
+                <div class="tab active-tab">portfolio.lua</div>
+                <div class="tab">projects.lua</div>
+                <div class="tab">skills.lua</div>
+            </div>
+            <div class="content">
+                <pre><code><span class="line-numbers">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+</span><span class="comment">-- Saumitra Kapoor's Portfolio</span>
 
-    <div>
-        <h2>currently learning/building</h2>
-        <ul>
-            <li>javascript</li>
-            <li>bittorrent client in rust (from scratch)</li>
-        </ul>
-    </div>
+<span class="keyword">local</span> <span class="function">Developer</span> = {
+    name = <span class="string">"Saumitra Kapoor"</span>,
+    role = <span class="string">"Full Stack Developer"</span>,
+    location = <span class="string">"India"</span>
+}
 
-    <div>
-        <h2>reading list</h2>
-        <ul>
-            <li>sicp</li>
-            <li>sapiens</li>
-            <li>galileo's error</li>
-            <li>the hundred page machine learning book</li>
-        </ul>
-    </div>
+<span class="comment">-- About Me</span>
+<span class="function">function</span> Developer:about()
+    <span class="keyword">return</span> [[
+        Welcome to my Portfolio! I'm a computer science enthusiast
+        who likes learning about new technlogies. I'm currently learning 
+        full-stack development & spend my spare time configuring vim.
+    ]]
+<span class="function">end</span>
 
-    <div>
-        <h2>some past (mini) projects</h2>
-        <ul>
-            <li><a href="https://github.com/kapoorsaumitra/silent-gestures">silent-gestures</a></li>
-            <li><a href="https://github.com/kapoorsaumitra/portmaster">portmaster</a></li>
-            <li><a href="https://github.com/kapoorsaumitra/studentbenefits">studentbenefits</a></li>
-            <li><a href="https://github.com/kapoorsaumitra/randomgiftideas">random gift ideas</a></li>
-        </ul>
-    </div>
+<span class="comment">-- Projects</span>
+Developer.projects = {
+    {
+        name = <span class="string">"Leetcode Difficulty Remover"</span>,
+        tech = {<span class="string">"JavaScript"</span>},
+        description = <span class="string">"Removes difficulty indicators from leetcode problems"</span>
+    },
+    {
+        name = <span class="string">"Ask Naval"</span>,
+        tech = {<span class="string">"React"</span>, <span class="string">"Framer"</span>, <span class="string">"Google Gemini"</span>},
+        description = <span class="string">"Seek wisdom, in Naval's words"</span>
+    },
+    {
+        name = <span class="string">"Silent Gestures"</span>,
+        tech = {<span class="string">"React"</span>, <span class="string">"Tailwind"</span>, <span class="string">"Google Gemini"</span>},
+        description = <span class="string">"Talk to people using ALS."</span>
+    },
+    {
+        name = <span class="string">"Portmaster"</span>,
+        tech = {<span class="string">"Python"</span>, <span class="string">"Google Gemini"</span>},
+        description = <span class="string">"Use AI to write Dockerfiles"</span>
+    },
+    {
+        name = <span class="string">"Student Benefits"</span>,
+        tech = {<span class="string">"React"</span>, <span class="string">"Next.js"</span>},
+        description = <span class="string">"Open-source repository for students to learn about tools, opportunities, exclusive discounts etc."</span>
+    }
+}
+<span class="comment">-- all of these projects are on github btw</span>
 
-    
+<span class="comment">-- Skills</span>
+Developer.skills = {
+    languages = {<span class="string">"JavaScript"</span>, <span class="string">"Java"</span>, <span class="string">"SQL"</span>, <span class="string">"HTML"</span>, <span class="string">"CSS"</span>},
+    frameworks = {<span class="string">"React"</span>, <span class="string">"Vite.js"</span>, <span class="string">"Node.js"</span>, <span class="string">"Express"</span>, <span class="string">"MongoDB"</span>},
+    tools = {<span class="string">"Git"</span>, <span class="string">"Docker"</span>, <span class="string">"AWS"</span>, <span class="string">"Postman"</span>}
+}
+
+<span class="comment">-- Contact</span>
+Developer.contact = {
+    email = <span class="string"><a href="mailto:saumitrakapoor24@gmail.com">saumitrakapoor24@gmail.com</a></span>,
+    github = <span class="string">"<a href="https://github.com/kapoorsaumitra">https://github.com/kapoorsaumitra</a>"</span>,
+    twitter = <span class="string">"<a href="https://x.com/saumitrakpr">https://x.com/saumitrakpr</a>"</span>
+}
+
+<span class="keyword">return</span> Developer
+</code></pre>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
